@@ -1,0 +1,50 @@
+Orbit Thermal Loads
+This model demonstrates how to define Earth properties that are spatially varying on the planet. A satellite in orbit experiences solar, albedo, and planetary infrared (IR) loads, where albedo and planetary IR can vary with latitude and longitude. In this example, these inputs are read from spreadsheet and image data. The total irradiation and flux onto the satellite are evaluated over several orbits and the albedo flux is plotted over the surface of Earth.
+
+Small satellites lend themselves well to numerical modeling due to their size. Approximations that would be inappropriate for larger spacecraft can provide valuable insight at this scale, especially for thermally conductive materials.
+
+More accurate approximations can be obtained by progressively increasing the level of complexity of these models through the addition of more nodes. More sophisticated models also serve to validate previous numerical models. Inclusion of the beta angle as an independent variable, besides time, gives better insight in the lifetime temperature profile of the satellite, which have all been implemented in Comsol.
+
+Thermal control of small satellites in low earth orbit (LEO) is not easy due to the intermittent heating conditions. The satellites in LEO are sometimes present in the illumination zone and other times in the eclipse zone, which imposes difficulties keeping their temperatures within the safe range. The present study investigates a thermal energy storage panel (TESP) integrated with phase change materials (PCM) to control the temperatures of satellite subsystems.
+
+Low-earth orbit (LEO) satellites face harsh temperatures. These satellites can be in both sunny and eclipse zones. Satellite components overheat in the sunny zone due to solar thermal radiation. The eclipse zone's absence of solar thermal radiation lowers satellite subsystem temperatures significantly. Spacecraft face heat from these sources: (a) sunlight immediately irradiates the spaceship, (b) earth's diffuse radiation (albedo), (c) earth's infrared (IR) radiation emission, (d) friction heating effect and (e) avionics systems lost thermal energy
+
+Thermal control systems are generally divided into two categories: passive systems and active systems. The passive systems include multi-layer insulation (MLI), surface coatings, radiators, heat pipes and thermal energy storage materials. On the other side, active systems are those that require a power source to operate, such as heaters, louvres, radiators, pumped-fluid loops, heat pumps, refrigerators, and thermo-electric coolers comsol simulation presents an outline for the thermal control systems classification.
+
+Thermal energy storage materials are classified into three general categories: sensible energy storage materials, latent energy storage materials, and thermochemical energy storage materials. The latent energy storage materials store heat during the phase transition process. 
+
+Phase change materials (PCM) are latent heat storage materials. During their phase transition from solid to liquid, the temperature of the materials remains constant at the corresponding melting temperature. In this process, the PCM stores a significant amount of heat energy. 
+
+During the cooling process, the PCM experiences a phase transition from liquid to solid again, and the temperature freezes at the solidification temperature. During the solidification process, the PCM releases the stored heat to the surrounding materials. 
+
+The satellites in low earth orbit (LEO) experience the highly intermittent thermal conditions of heating during the illumination zone and cooling during the eclipse zone. In addition, the thermal controllability of small satellites is weak due to the small masses and, as a result, small heat capacity. The PCM has a high potential in the thermal management of small satellites.
+
+Researchers surveyed, to sum up, the current research at the National Aeronautics and Space Administration to develop novel technologies of thermal management systems for robotic missions in the future. The exoMars 2016 mission, which was initiated by the European space agency, adopted three PCM-integrated-thermal capacitors. 
+
+The thermal capacitors are heat sinks with PCM integrated inside their cavities. 
+Other scientists designed a novel heat storage panel for the thermal management of a Japanese satellite named Hodoyoshi-4 and was demonstrated in orbit. The heat storage panel conducted a pleasant performance in thermal management performance. A numerical study was performed to investigate the influence of fin configuration on the thermal conductivity enhancement of PCM for satellite thermal control applications. 
+The study reported that tapered fins delivered performance better than straight fins and could reduce the thermal control part temperature. 
+They investigated the effect of PCM melting temperature and PCM mixing on the thermal management performance of small satellites. The findings concluded that the PCM combination provided more independence on the PCM melting temperature at different thermal powers.
+
+
+A general trend that is observed from these models, is that the satellite’s temperature responds very quickly to changes in the heat load, because of the small mass of the system. In general, the satellite will reach a steady temperature range after around five orbits, where all of the effects of the initial temperature will have disappeared from the transient solution.
+ At orbit five, the difference between peak values of the temperature changes on average by a value of around 0.4%, which can be considered steady for the purposes of this analysis.
+The temperature fluctuations of all the models considered above are relatively in agreement. While differences are expected as the complexity of the models increases, the differences observed are within an expected range. 
+While the generated heat load will, in reality, change as the satellite transitions between modes, the full power draw (assuming 0% efficiency) is always ”on” in this analysis, providing a conservative estimate for the temperature, as heat loads are expected to be lower.
+Further development of these satellite heat transfer models can involve finite element analysis, to provide a better approximation of internal temperature gradients. 
+
+While it is possible to do this in MATLAB, it is not well equipped to handle discontinuities in the models, such as the interfaces between sides. Instead, these models can be developed in more specialized tools, such as Thermal Desktop.
+
+Conclusions
+The present study investigates a thermal energy storage panel (TESP) for the thermal management of small satellites using phase change materials (PCM). The TESP is made of aluminium 6061 T-6 and is divided into six separate cavities to contain the PCM. 
+The TESP is mounted on the side opposing the payload side. The TESP is tested under heating powers of 11 W and 14 W. Three PCM are adopted: RT 12, RT 22, and RT 31 organic-based. The conclusions of the present work are outlined in the following bullet points:
+1.PCMs are a promising solution for the thermal management of devices subjected to alternating thermal conditions repeatedly, such as the satellite subsystems in low earth orbit (LEO).
+2. The PCM with an intermediate melting point is a better choice for a PCM-based thermal management system. Intermediate melting point refers to the PCM with a melting point equal to the average between the maximum and minimum temperature results for no PCM case.
+3. The PCM decreases the extreme temperature difference significantly. At 11 W heating load, RT 12 reports a lower ETD and can decrease it by 63.9 % relative to the case with no PCM. While at 14 W heating load, RT 22 reports a lower ETD of 23 K and decreases it by 63 % relative to the case with no PCM.
+4. The PCM can increase the thermal storage capacity of the TESP significantly. RT 12 achieves an increase in the ATC by 137 % at 11 W. While RT 22 reports the highest ATC among other cases of 6.25 kJ/kg. K and increases the ATC by 134 % at 14 W.
+
+Recommendation for future work.
+In view of the results presented, further attention may be needed to investigate some unresolved points. More work should be dedicated to PCM microcapsulation and capsule mass optimization. 
+Carbon fibre-reinforced polymers are good candidates for future research. Carbon fiber has a relatively low density and high thermal conductivity, which makes it highly candidate for PCM microcapsulation manufacturing. 
+Development of micro PCM capsule to be compatible with cube satellites and investigation of the PCM phase transition processes and thermal control performance with modules of smaller scales. The testing data should consider the change in satellite's orbit orientation with respect to the sun and the Earth with time for future study. 
+Experimental work for the proposed modules and satellite with LEO test conditions and standards in a thermal vacuum chamber should be implemented.
